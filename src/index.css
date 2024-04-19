@@ -1,0 +1,38 @@
+:root {
+  font-family: "Inter", sans-serif;
+  line-height: 2.2rem;
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.5rem;
+  height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img__container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
