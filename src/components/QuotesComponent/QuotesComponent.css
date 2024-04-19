@@ -1,0 +1,26 @@
+.quote__component--box {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.quote__text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  color: #fff;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.quote {
+}
+
+.quote__author {
+  font-weight: 700;
+}
+
+.btn__refresh {
+  border: none;
+  background-color: transparent;
+  align-self: flex-start;
+}

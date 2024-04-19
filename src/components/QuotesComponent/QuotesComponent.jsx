@@ -29,7 +29,7 @@ const QuotesComponent = () => {
         <p className="quote__author">{quote.author}</p>
       </div>
       <button className="btn__refresh" onClick={fetchQuote}>
-        <img src={iconRefresh} alt="refresh icon" width={40} />
+        <img src={iconRefresh} alt="refresh icon" />
       </button>
     </div>
   );

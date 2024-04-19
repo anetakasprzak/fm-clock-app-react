@@ -7,32 +7,16 @@ import imgNightDesktop from "./assets/desktop/bg-image-nighttime.jpg";
 import QuotesComponent from "./components/QuotesComponent/QuotesComponent";
 
 function App() {
-  const currentTime = new Date().getHours();
+  // const currentTime = new Date().getHours();
+  const currentTime = 12;
 
   const dayTime = currentTime > 5 && currentTime < 18;
 
   return (
     <div className="wrapper">
-      <div className="background__container">
-        {dayTime && (
-          <picture className="background--day">
-            <source srcSet={imgDayDesktop} media="(min-width: 75em)" />
-            <source srcSet={imgDayTablet} media="(min-width: 30em)" />
-            <source srcSet={imgDayMobile} media="(min-width: 16em)" />
-            <img src={imgDayMobile} alt="image" />
-          </picture>
-        )}
-        {!dayTime && (
-          <picture className="background--night">
-            <source srcSet={imgNightDesktop} media="(min-width: 75em)" />
-            <source srcSet={imgNightTablet} media="(min-width: 30em)" />
-            <source srcSet={imgNightMobile} media="(min-width: 16em)" />
-            <img src={imgNightMobile} alt="image" />
-          </picture>
-        )}
+      <div className={`background__container ${dayTime ? "day" : "night"}`}>
+        <QuotesComponent />
       </div>
-
-      <QuotesComponent />
     </div>
   );
 }
