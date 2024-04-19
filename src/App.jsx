@@ -4,9 +4,11 @@ import imgDayTablet from "./assets/tablet/bg-image-daytime.jpg";
 import imgNightTablet from "./assets/tablet/bg-image-nighttime.jpg";
 import imgDayDesktop from "./assets/desktop/bg-image-daytime.jpg";
 import imgNightDesktop from "./assets/desktop/bg-image-nighttime.jpg";
+import QuotesComponent from "./components/QuotesComponent/QuotesComponent";
 
 function App() {
   const currentTime = new Date().getHours();
+
   const dayTime = currentTime > 5 && currentTime < 18;
 
   return (
@@ -29,6 +31,8 @@ function App() {
           </picture>
         )}
       </div>
+
+      <QuotesComponent />
     </div>
   );
 }
