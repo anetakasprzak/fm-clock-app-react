@@ -10,9 +10,7 @@
   color: #fff;
   font-size: 1.2rem;
   opacity: 0.9;
-}
-
-.quote {
+  max-width: 90%;
 }
 
 .quote__author {
@@ -23,4 +21,40 @@
   border: none;
   background-color: transparent;
   align-self: flex-start;
+}
+
+@media screen and (min-width: 26em) {
+  .quote__text-box {
+    font-size: 1.4rem;
+    max-width: 80%;
+  }
+}
+
+@media screen and (min-width: 33em) {
+  .quote__component--box {
+    gap: 2rem;
+  }
+
+  .quote__text-box {
+    max-width: 70%;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .quote__text-box {
+    max-width: 70%;
+  }
+
+  .btn__refresh {
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 65em) {
+  .quote__text-box {
+    max-width: 50%;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
 }

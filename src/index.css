@@ -30,39 +30,3 @@ video {
   max-width: 100%;
   height: auto;
 }
-.wrapper {
-  position: relative;
-}
-
-.background__container {
-  height: 100vh;
-  padding: 3.2rem 2.6rem;
-}
-
-.day {
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-    url("./assets/mobile/bg-image-daytime.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.night {
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-    url("./assets/mobile/bg-image-nighttime.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-@media screen and (min-width: 30em) {
-  .day {
-    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-      url("./assets/tablet/bg-image-daytime.jpg");
-  }
-
-  .night {
-    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-      url("./assets/tablet/bg-image-nighttime.jpg");
-  }
-}
