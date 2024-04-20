@@ -25,7 +25,7 @@ const QuotesComponent = () => {
   return (
     <div className="quote__component--box">
       <div className="quote__text-box">
-        <p className="quote">&apos;{quote.content}&apos;</p>
+        <p className="quote">&quot;{quote.content}&quot;</p>
         <p className="quote__author">{quote.author}</p>
       </div>
       <button className="btn__refresh" onClick={fetchQuote}>
