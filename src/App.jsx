@@ -1,4 +1,5 @@
 import Background from "./components/Background/Background";
+import Button from "./components/ButtonComponent/ButtonComponent";
 import QuotesComponent from "./components/QuotesComponent/QuotesComponent";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="wrapper">
       <Background>
         <QuotesComponent />
+        <Button />
       </Background>
     </div>
   );
