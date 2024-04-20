@@ -40,7 +40,7 @@ const Button = () => {
           <path
             d="M11.2 18.3999L16 13.5999L20.8 18.3999"
             stroke="white"
-            stroke-width="2"
+            strokeWidth="2"
           />
         </svg>
       )}

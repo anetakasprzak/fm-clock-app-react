@@ -1,25 +1,18 @@
 import "./CurrentTimeComponent.css";
 import iconMoon from "../../assets/desktop/icon-moon.svg";
 import iconSun from "../../assets/desktop/icon-sun.svg";
-import { useEffect } from "react";
 
-const CurrentTimeComponent = () => {
-  async function fetchIP() {
-    try {
-      const res = await fetch(`https://api.ipify.org/?format=json`);
-      const data = await res.json();
+const CurrentTimeComponent = ({ apiData }) => {
+  const cityName = apiData?.data?.location?.city?.name;
+  const countryName = apiData?.data?.location?.country?.name;
+  const timezoneCode = apiData?.data?.timezone?.code;
+  const currentTime = apiData?.data?.timezone?.current_time;
 
-      console.log(data);
-    } catch (err) {
-      console.error(err);
-    }
-  }
+  const hour = new Date(currentTime).getHours();
+  const minutes = new Date(currentTime).getMinutes();
+  console.log(`${hour}:${minutes}`);
 
-  useEffect(function () {
-    fetchIP();
-  }, []);
-
-  return <div className="">CURRENT TIME</div>;
+  return <div className="">{"name"}</div>;
 };
 
 export default CurrentTimeComponent;
