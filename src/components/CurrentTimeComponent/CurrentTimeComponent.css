@@ -1,0 +1,127 @@
+.time__btn--wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+.current__time--box {
+  color: #fff;
+  display: flex;
+  gap: 1.6rem;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+.greeting__box {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.greeting__text {
+  letter-spacing: 3px;
+}
+
+.greeting__currently {
+  display: none;
+}
+
+.current__hour {
+  font-size: 7rem;
+  font-weight: 700;
+  letter-spacing: -2.5px;
+}
+
+.current__hour--code {
+  font-weight: 300;
+  line-height: normal;
+  font-size: 1.5rem;
+  letter-spacing: normal;
+}
+
+.location {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+@media screen and (min-width: 20.1em) {
+  .current__hour {
+    font-size: 9rem;
+  }
+}
+
+@media screen and (min-width: 23.75em) {
+  .current__hour {
+    font-size: 10rem;
+  }
+
+  .greeting__box {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .current__hour--code {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 29em) {
+  .greeting__currently {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 38em) {
+  .time__btn--wrapper {
+    font-size: 1.6rem;
+  }
+
+  .current__time--box {
+    gap: 2.4rem;
+  }
+
+  .current__hour {
+    font-size: 12rem;
+  }
+
+  .location {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 65em) {
+  .time__btn--wrapper {
+    font-size: 1.8rem;
+  }
+
+  .current__hour--code {
+    font-size: 2.4rem;
+  }
+
+  .location {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .time__btn--wrapper {
+    font-size: 2rem;
+  }
+
+  .current__hour {
+    font-size: 18rem;
+    margin-top: 3rem;
+  }
+
+  .time__btn--wrapper {
+    flex-direction: row;
+    gap: 0rem;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .location {
+    font-size: 2rem;
+  }
+}
