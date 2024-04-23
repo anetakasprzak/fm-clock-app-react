@@ -12,9 +12,17 @@ const CurrentTimeComponent = ({ ipApiData }) => {
   const hour = new Date(currentTime).getHours();
   const minutes = new Date(currentTime).getMinutes();
 
-  const dayTime = currentTime > 5 && currentTime < 18;
-  const morning = currentTime > 5 && currentTime < 12;
-  const afternoon = currentTime > 12 && currentTime < 18;
+  /*
+  
+  - "Good morning" between 5am and 12pm
+  - "Good afternoon" between 12pm and 6pm
+  - "Good evening" between 6pm and 5am
+
+  */
+
+  const morning = hour >= 5 && hour < 12;
+  const afternoon = hour >= 12 && hour < 18;
+  const dayTime = hour > 5 && hour < 18;
 
   return (
     <div className="time__btn--wrapper">

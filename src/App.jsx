@@ -102,7 +102,7 @@ const mocked = {
     tlds: [".uk"],
     timezone: {
       id: "Europe/London",
-      current_time: "2024-04-20T12:37:32+01:00",
+      current_time: "2024-04-20T18:37:32+01:00",
       code: "BST",
       is_daylight_saving: true,
       gmt_offset: 3600,
@@ -178,9 +178,11 @@ function App() {
   //   }
   // }, [ipApiData]);
 
+  console.log({ ipApiData });
+
   return (
     <div className="wrapper">
-      <Background>
+      <Background ipApiData={ipApiData}>
         <QuotesComponent />
         <CurrentTimeComponent
           ipApiData={ipApiData}

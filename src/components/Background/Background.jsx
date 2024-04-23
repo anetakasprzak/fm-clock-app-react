@@ -1,10 +1,11 @@
 import "./Background.css";
 
-const Background = ({ children }) => {
-  // const currentTime = new Date().getHours();
-  const currentTime = 12;
+const Background = ({ children, ipApiData }) => {
+  const currentTime = ipApiData?.data?.timezone?.current_time;
 
-  const dayTime = currentTime > 5 && currentTime < 18;
+  const hour = new Date(currentTime).getHours();
+
+  const dayTime = hour > 5 && hour < 18;
 
   return (
     <div className={`background__container ${dayTime ? "day" : "night"}`}>
