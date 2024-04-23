@@ -1,7 +1,7 @@
 import "./DetailsComponent.css";
 
 const DetailsComponent = () => {
-  return <div className="">DETAILS COMPONENT</div>;
+  return <div className="details__component--box">DETAILS COMPONENT</div>;
 };
 
 export default DetailsComponent;

@@ -1,6 +1,7 @@
 .quote__component--box {
   display: flex;
   gap: 1.6rem;
+  padding: 0 1.5rem 0 2.6rem;
 }
 
 .quote__text-box {
@@ -33,6 +34,7 @@
 @media screen and (min-width: 33em) {
   .quote__component--box {
     gap: 2rem;
+    padding: 0 5rem 0 5.6rem;
   }
 
   .quote__text-box {
@@ -42,12 +44,22 @@
 }
 
 @media screen and (min-width: 48em) {
+  .quote__component--box {
+    padding: 0 5rem 4rem 8rem;
+  }
+
   .quote__text-box {
     max-width: 70%;
   }
 
   .btn__refresh {
     cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 55em) {
+  .quote__component--box {
+    padding: 0 16.5rem 5.6rem 16.5rem;
   }
 }
 

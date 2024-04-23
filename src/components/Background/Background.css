@@ -1,6 +1,6 @@
 .background__container {
   height: 100vh;
-  padding: 3.2rem 2.6rem;
+  padding-top: 2.6rem;
   z-index: 0;
   display: flex;
   flex-direction: column;
@@ -41,15 +41,11 @@
 
 @media screen and (min-width: 34em) {
   .background__container {
-    padding: 5.6rem 6rem;
+    padding-top: 5.6rem;
   }
 }
 
 @media screen and (min-width: 48em) {
-  .background__container {
-    padding: 5.6rem 10rem;
-  }
-
   .day {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
       url("../../assets/desktop/bg-image-daytime.jpg");
@@ -62,17 +58,5 @@
       url("../../assets/desktop/bg-image-nighttime.jpg");
     background-position: center;
     max-width: 144rem;
-  }
-}
-
-@media screen and (min-width: 55em) {
-  .background__container {
-    padding: 5.6rem 16.5rem;
-  }
-}
-
-@media screen and (min-width: 80em) {
-  .background__container {
-    padding: 5.6rem 16.5rem;
   }
 }

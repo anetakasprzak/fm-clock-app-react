@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Background from "./components/Background/Background";
 import CurrentTimeComponent from "./components/CurrentTimeComponent/CurrentTimeComponent";
 import QuotesComponent from "./components/QuotesComponent/QuotesComponent";
+import DetailsComponent from "./components/DetailsComponent/DetailsComponent";
 import Ipbase from "@everapi/ipbase-js";
 
 const mocked = {
@@ -102,7 +103,7 @@ const mocked = {
     tlds: [".uk"],
     timezone: {
       id: "Europe/London",
-      current_time: "2024-04-20T18:37:32+01:00",
+      current_time: "2024-04-20T10:37:32+01:00",
       code: "BST",
       is_daylight_saving: true,
       gmt_offset: 3600,
@@ -150,6 +151,8 @@ function App() {
   const [ipApiData, setIpApiData] = useState(mocked);
   const [worldTimeApiData, setWorldTimeApiData] = useState(mocked2);
 
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
+
   // const ipBase = new Ipbase(
   //   "ipb_live_qSRYJeK7U7woCu8fcF8zf0jTQy1e5484YSUWExSL"
   // );
@@ -178,16 +181,17 @@ function App() {
   //   }
   // }, [ipApiData]);
 
-  console.log({ ipApiData });
-
   return (
     <div className="wrapper">
       <Background ipApiData={ipApiData}>
-        <QuotesComponent />
+        {!isDetailsOpen && <QuotesComponent />}
         <CurrentTimeComponent
           ipApiData={ipApiData}
           worldTimeApiData={worldTimeApiData}
+          setIsDetailsOpen={setIsDetailsOpen}
+          isDetailsOpen={isDetailsOpen}
         />
+        {isDetailsOpen && <DetailsComponent />}
       </Background>
     </div>
   );

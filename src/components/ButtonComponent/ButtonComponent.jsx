@@ -1,17 +1,14 @@
 import "./ButtonComponent.css";
-import { useState } from "react";
 
-const Button = () => {
-  const [isExpand, setIsExpand] = useState(false);
-
+const Button = ({ setIsDetailsOpen, isDetailsOpen }) => {
   return (
     <button
       className="btn__expand"
-      onClick={() => setIsExpand((expand) => !expand)}
+      onClick={() => setIsDetailsOpen((open) => !open)}
     >
-      <p className="btn__expand-text">{isExpand ? "Less" : "More"}</p>
+      <p className="btn__expand-text">{isDetailsOpen ? "Less" : "More"}</p>
 
-      {!isExpand ? (
+      {!isDetailsOpen ? (
         <svg
           width="32"
           height="32"

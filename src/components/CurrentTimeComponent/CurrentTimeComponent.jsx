@@ -3,7 +3,11 @@ import Button from "../ButtonComponent/ButtonComponent";
 import iconMoon from "../../assets/desktop/icon-moon.svg";
 import iconSun from "../../assets/desktop/icon-sun.svg";
 
-const CurrentTimeComponent = ({ ipApiData }) => {
+const CurrentTimeComponent = ({
+  ipApiData,
+  setIsDetailsOpen,
+  isDetailsOpen,
+}) => {
   const cityName = ipApiData?.data?.location?.city?.name;
   const countryName = ipApiData?.data?.location?.country?.name;
   const timezoneCode = ipApiData?.data?.timezone?.code;
@@ -11,14 +15,6 @@ const CurrentTimeComponent = ({ ipApiData }) => {
 
   const hour = new Date(currentTime).getHours();
   const minutes = new Date(currentTime).getMinutes();
-
-  /*
-  
-  - "Good morning" between 5am and 12pm
-  - "Good afternoon" between 12pm and 6pm
-  - "Good evening" between 6pm and 5am
-
-  */
 
   const morning = hour >= 5 && hour < 12;
   const afternoon = hour >= 12 && hour < 18;
@@ -54,7 +50,10 @@ const CurrentTimeComponent = ({ ipApiData }) => {
           in {cityName}, {countryName}
         </p>
       </div>
-      <Button />
+      <Button
+        setIsDetailsOpen={setIsDetailsOpen}
+        isDetailsOpen={isDetailsOpen}
+      />
     </div>
   );
 };
