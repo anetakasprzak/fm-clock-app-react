@@ -2,6 +2,9 @@
   display: flex;
   gap: 1.6rem;
   padding: 0 1.5rem 0 2.6rem;
+
+  position: absolute;
+  top: 8rem;
 }
 
 .quote__text-box {
@@ -11,7 +14,7 @@
   color: #fff;
   font-size: 1.2rem;
   opacity: 0.9;
-  max-width: 90%;
+  max-width: 70%;
 }
 
 .quote__author {
@@ -27,7 +30,6 @@
 @media screen and (min-width: 23.5em) {
   .quote__text-box {
     font-size: 1.4rem;
-    max-width: 80%;
   }
 }
 
@@ -38,7 +40,6 @@
   }
 
   .quote__text-box {
-    max-width: 70%;
     font-size: 1.6rem;
   }
 }
@@ -46,10 +47,6 @@
 @media screen and (min-width: 48em) {
   .quote__component--box {
     padding: 0 5rem 4rem 8rem;
-  }
-
-  .quote__text-box {
-    max-width: 70%;
   }
 
   .btn__refresh {
@@ -65,7 +62,6 @@
 
 @media screen and (min-width: 65em) {
   .quote__text-box {
-    max-width: 50%;
     font-size: 1.8rem;
     line-height: 2.8rem;
   }

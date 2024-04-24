@@ -184,19 +184,21 @@ function App() {
   return (
     <div className="wrapper">
       <Background ipApiData={ipApiData}>
-        {!isDetailsOpen && <QuotesComponent />}
-        <CurrentTimeComponent
-          ipApiData={ipApiData}
-          worldTimeApiData={worldTimeApiData}
-          setIsDetailsOpen={setIsDetailsOpen}
-          isDetailsOpen={isDetailsOpen}
-        />
-        {isDetailsOpen && (
-          <DetailsComponent
+        <div className="container">
+          {!isDetailsOpen && <QuotesComponent />}
+          <CurrentTimeComponent
+            ipApiData={ipApiData}
             worldTimeApiData={worldTimeApiData}
-            currentTime={ipApiData?.data?.timezone?.current_time}
+            setIsDetailsOpen={setIsDetailsOpen}
+            isDetailsOpen={isDetailsOpen}
           />
-        )}
+          {isDetailsOpen && (
+            <DetailsComponent
+              worldTimeApiData={worldTimeApiData}
+              currentTime={ipApiData?.data?.timezone?.current_time}
+            />
+          )}
+        </div>
       </Background>
     </div>
   );

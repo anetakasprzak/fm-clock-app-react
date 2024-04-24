@@ -30,3 +30,15 @@ video {
   max-width: 100%;
   height: auto;
 }
+
+.wrapper {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}

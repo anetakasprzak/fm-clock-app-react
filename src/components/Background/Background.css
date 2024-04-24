@@ -4,7 +4,6 @@
   z-index: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .day {
@@ -30,12 +29,16 @@
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
       url("../../assets/tablet/bg-image-daytime.jpg");
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .night {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
       url("../../assets/tablet/bg-image-nighttime.jpg");
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -51,6 +54,8 @@
       url("../../assets/desktop/bg-image-daytime.jpg");
     background-position: center;
     max-width: 144rem;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .night {
@@ -58,5 +63,7 @@
       url("../../assets/desktop/bg-image-nighttime.jpg");
     background-position: center;
     max-width: 144rem;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
