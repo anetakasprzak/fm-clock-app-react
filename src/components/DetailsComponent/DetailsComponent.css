@@ -2,9 +2,14 @@
   height: max-content;
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(20px);
-  padding: 5rem 2.6rem;
+  padding: 7rem 3rem;
   display: grid;
   gap: 2rem;
+}
+
+.dark {
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
 }
 
 .details__data--box {
@@ -26,7 +31,7 @@
 
 @media screen and (min-width: 30em) {
   .details__component--box {
-    padding: 5rem 4.6rem;
+    padding: 7rem 4.6rem;
   }
 
   .details__data {

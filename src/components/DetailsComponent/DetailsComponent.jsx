@@ -1,15 +1,18 @@
 import "./DetailsComponent.css";
 
-const DetailsComponent = ({ worldTimeApiData }) => {
+const DetailsComponent = ({ worldTimeApiData, currentTime }) => {
   const timeZone = worldTimeApiData.timezone;
   const dayOfYear = worldTimeApiData.day_of_year;
   const dayOfWeek = worldTimeApiData.day_of_week;
   const weekNumber = worldTimeApiData.week_number;
 
-  console.log(timeZone, dayOfWeek, dayOfYear, weekNumber);
+  const hour = new Date(currentTime).getHours();
+  const dayTime = hour > 5 && hour < 18;
+
+  console.log(dayTime);
 
   return (
-    <div className="details__component--box">
+    <div className={`details__component--box ${!dayTime ? "dark" : ""}`}>
       <div className="details__data--box grid--1">
         <p className="details__text">Current timezone</p>
         <p className="details__data">{timeZone}</p>
