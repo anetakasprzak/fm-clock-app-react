@@ -1,5 +1,14 @@
 .details__component--box {
-  height: 25.6rem;
-  background-color: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(20.387113571166992px);
+  height: min-content;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(20px);
+}
+
+.details__data--box {
+}
+
+.details__text {
+}
+
+.details__data {
 }

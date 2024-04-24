@@ -191,7 +191,9 @@ function App() {
           setIsDetailsOpen={setIsDetailsOpen}
           isDetailsOpen={isDetailsOpen}
         />
-        {isDetailsOpen && <DetailsComponent />}
+        {isDetailsOpen && (
+          <DetailsComponent worldTimeApiData={worldTimeApiData} />
+        )}
       </Background>
     </div>
   );
