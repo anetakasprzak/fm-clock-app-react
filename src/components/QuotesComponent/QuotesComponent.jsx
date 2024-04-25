@@ -11,8 +11,6 @@ const QuotesComponent = () => {
       const quote = await res.json();
 
       setQuote(quote.at(0));
-
-      console.log({ quote });
     } catch (err) {
       console.error(err);
     }

@@ -7,6 +7,9 @@ import Ipbase from "@everapi/ipbase-js";
 
 function App() {
   const [ipApiData, setIpApiData] = useState([]);
+  const [ipApiLoading, setIpApiLoading] = useState(false);
+  const [ipApiError, setIpApiError] = useState("");
+
   const [worldTimeApiData, setWorldTimeApiData] = useState([]);
 
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
@@ -16,15 +19,22 @@ function App() {
   );
 
   useEffect(() => {
-    ipBase.info().then((response) => {
-      setIpApiData(response);
-    });
+    ipBase
+      .info()
+      .then((response) => {
+        setIpApiLoading(true);
+        if (response) {
+          setIpApiData(response);
+        }
+        setIpApiLoading(false);
+      })
+      .catch((err) => setIpApiError(err.message));
   }, []);
 
   const fetchWorldTimeApi = async (timezoneId) => {
     try {
       const res = await fetch(
-        `http://worldtimeapi.org/api/timezone/${timezoneId}`
+        `https://worldtimeapi.org/api/timezone/${timezoneId}`
       );
       const data = await res.json();
       setWorldTimeApiData(data);

@@ -9,8 +9,6 @@ const DetailsComponent = ({ worldTimeApiData, currentTime }) => {
   const hour = new Date(currentTime).getHours();
   const dayTime = hour > 5 && hour < 18;
 
-  console.log(dayTime);
-
   return (
     <div className={`details__component--box ${!dayTime ? "dark" : ""}`}>
       <div className="details__data--box grid--1">
