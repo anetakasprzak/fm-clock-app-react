@@ -16,6 +16,9 @@ const CurrentTimeComponent = ({
   const hour = new Date(currentTime).getHours();
   const minutes = new Date(currentTime).getMinutes();
 
+  const formatHour = hour < 10 ? `0${hour}` : hour;
+  const formatMin = minutes < 10 ? `0${minutes}` : minutes;
+
   const morning = hour >= 5 && hour < 12;
   const afternoon = hour >= 12 && hour < 18;
   const dayTime = hour > 5 && hour < 18;
@@ -43,7 +46,7 @@ const CurrentTimeComponent = ({
           </span>
         </div>
         <div className="current__hour">
-          {hour}:{minutes}
+          {hour ? formatHour : "00"}:{minutes ? formatMin : "00"}
           <span className="current__hour--code"> {timezoneCode}</span>
         </div>
         <p className="location">
