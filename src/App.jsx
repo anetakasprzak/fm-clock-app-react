@@ -23,7 +23,7 @@ function App() {
           setIpApiData(response);
         }
       })
-      .catch((err) => setIpApiError(err.message));
+      .catch((err) => console.error(err.message));
   }, []);
 
   const fetchWorldTimeApi = async (timezoneId) => {

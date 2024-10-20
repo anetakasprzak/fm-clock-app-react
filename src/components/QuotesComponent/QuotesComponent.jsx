@@ -7,10 +7,12 @@ const QuotesComponent = () => {
 
   async function fetchQuote() {
     try {
-      const res = await fetch(`https://api.quotable.io/quotes/random`);
+      const res = await fetch(
+        `https://programming-quotesapi.vercel.app/api/random`
+      );
       const quote = await res.json();
 
-      setQuote(quote.at(0));
+      setQuote(quote);
     } catch (err) {
       console.error(err);
     }
@@ -23,7 +25,7 @@ const QuotesComponent = () => {
   return (
     <div className="quote__component--box">
       <div className="quote__text-box">
-        <p className="quote">&quot;{quote.content}&quot;</p>
+        <p className="quote">&quot;{quote.quote}&quot;</p>
         <p className="quote__author">{quote.author}</p>
       </div>
       <button className="btn__refresh" onClick={fetchQuote}>
